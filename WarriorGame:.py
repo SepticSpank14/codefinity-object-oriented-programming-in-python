@@ -1,8 +1,11 @@
+# Warrior Game: A simple text-based game where a warrior can equip different weapons and fight an enemy.
+# Download and run this code in a Python environment to play the game.
+
 class Weapon():
     def __init__(self, name, attack, weapon_type):
-    self.name = name
-    self.attack = attack
-    self.weapon_type = weapon_type
+        self.name = name
+        self.attack = attack
+        self.weapon_type = weapon_type
 
     def __str__(self):
         return f"{self.name} ({self.weapon_type}) - Attack: {self.attack}"
@@ -79,10 +82,13 @@ weapons = [
 
 # Create armor pieces
 armor = Armor("Chainmail", 25, "Chainmail")
-helmet = Helmet("Steel Helmet", 15 "Steel")
+helmet = Helmet("Steel Helmet", 15, "Steel")
 shield = Shield("Wooden Shield", 18, "Wood & Metal")
 
 # Create warrior
+warrior = Warrior(armor, helmet, shield)
+
+#Equip weapon
 print("\nChoose your weapon: ")
 for i, weapon in enumerate(weapons):
     print(f"{i+1}. {weapon}")
